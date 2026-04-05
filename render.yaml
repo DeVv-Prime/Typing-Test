@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: typingtest
+    runtime: python
+    repo: https://github.com/YOUR_USERNAME/typingtest
+    plan: free
+    region: oregon
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: FLASK_ENV
+        value: production
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_PATH
+        value: /data/typingtest.db
+    disk:
+      name: data
+      mountPath: /data
+      sizeGB: 1
