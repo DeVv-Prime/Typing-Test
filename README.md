@@ -23,7 +23,7 @@ git commit -m "Initial commit"
 git remote add origin https://github.com/YOUR_USERNAME/typingtest.git
 git push -u origin main
 Deploy on Render
-
+```
 Go to render.com
 
 Click "New +" → "Blueprint"
@@ -33,7 +33,7 @@ Connect your GitHub repository
 Render will auto-detect render.yaml
 
 Click "Apply"
-
+```
 Your app will be live at: https://typingtest.onrender.com
 
 🖥️ Local Development
@@ -51,7 +51,7 @@ pip install -r requirements.txt
 
 # Run the app
 python app.py
-
+```
 # Open http://localhost:5000
 📊 Tech Stack
 Backend: Flask 2.3.3
@@ -89,12 +89,13 @@ typingtest/
 ├── runtime.txt        # Python version
 ├── Procfile           # Process definition
 └── README.md          # Documentation
-🔒 Environment Variables
+
+## 🔒 Environment Variables
 Variable	Description
 SECRET_KEY	Flask session security (auto-generated)
 DATABASE_PATH	SQLite database location
 PORT	Server port (Render sets automatically)
-📈 Performance
+# 📈 Performance
 Handles concurrent users with Gunicorn workers
 
 SQLite with proper indexing for fast queries
@@ -103,10 +104,10 @@ Rate limiting prevents API abuse
 
 Compressed responses for faster loading
 
-🤝 Contributing
+## 🤝 Contributing
 Feel free to fork and submit pull requests!
 
-📄 License
+# 📄 License
 MIT License - Free for personal and commercial use
 
 Created with ❤️ for typists worldwide
@@ -126,6 +127,7 @@ git commit -m "Initial commit: Professional typing test app"
 git branch -M main
 git remote add origin https://github.com/YOUR_USERNAME/typingtest.git
 git push -u origin main
+```
 Deploy on Render:
 
 Sign up/login at render.com
