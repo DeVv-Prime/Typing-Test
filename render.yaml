@@ -1,12 +1,12 @@
 services:
   - type: web
     name: typingtest
-    runtime: python
+    runtime: python3
     repo: https://github.com/YOUR_USERNAME/typingtest
     plan: free
     region: oregon
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: gunicorn app:app --workers=2 --threads=4 --timeout=120
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.0
